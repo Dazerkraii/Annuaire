@@ -23,7 +23,7 @@ public class CarnetController {
 
     @Autowired
     private CarnetService carnetService;
-    //  Pour une api REST
+    //  Pour une api REST (advanced REST Client)
     //    @RequestMapping(value = "/contacts", method = RequestMethod.GET)
     //    public List<Carnet> findAll() {
     //        // TODO Auto-generated method stub
