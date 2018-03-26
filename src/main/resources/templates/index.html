@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Annuaire</title>
+</head>
+<style>
+label {width: 140px;
+display: inline-block;}
+</style>
+<body>
+	<h1>Liste de carnet</h1>
+	
+	<form name="ajoutCarnet" action="/ajout" method="post">
+		<select name="civilite">
+		  <option value="M">H</option>
+		  <option value="MME">F</option>
+		</select><br>
+		<label>Nom :</label><input type="text" name="nom" autofocus="autofocus"><br>
+		<label>Prenom :</label><input type="text" name="prenom"><br>
+		<label>Date de naissance :</label><input type="text" name="dateDeNaissance"><br>
+		<label>Numero de tel :</label><input type="text" name="numeroTel"><br>
+		<label>Adresse :</label><input type="text" name="adresse"><br>
+		<label>Code Postal :</label><input type="text" name="codePostal"><br>
+		<label>Ville :</label><input type="text" name="ville"><br><br>
+		
+		<input type="submit" value="Ajouter" name="ajout">
+		
+	</form>
+
+	<ul th:each="item: ${carnets}">
+		<li th:text="${item.id}"></li>
+		<li th:text="${item.civilite}"></li>
+		<li th:text="${item.nom}"></li>
+		<li th:text="${item.prenom}"></li>
+		<li th:text="${item.dateDeNaissance}"></li>
+		<li th:text="${item.numeroTel}"></li>
+		<li th:text="${item.adresse}"></li>
+		<li th:text="${item.codePostal}"></li>
+		<li th:text="${item.ville}"></li>
+
+	</ul>
+</body>
+</html>
