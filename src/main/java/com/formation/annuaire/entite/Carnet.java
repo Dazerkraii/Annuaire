@@ -23,6 +23,18 @@ public class Carnet {
 
     }
 
+    /**
+     * Constructeur d'objet CARNET
+     * @param id
+     * @param civilite
+     * @param nom
+     * @param prenom
+     * @param dateDeNaissance
+     * @param tel
+     * @param adresse
+     * @param cp
+     * @param ville
+     */
     public Carnet(int id, Civilite civilite, String nom, String prenom, String dateDeNaissance, String tel, String adresse, String cp, String ville) {
         this.id = id;
         this.civilite = civilite;
